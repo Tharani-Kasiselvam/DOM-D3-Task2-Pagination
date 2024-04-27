@@ -68,18 +68,16 @@ pardiv.style.alignItems = "center"
 
     function pgn_link_load(pagenum){
         tbdy.innerHTML = ''
-        console.log("Clicked inside function call")
 
         var request = new XMLHttpRequest();
         request.open("GET","https://raw.githubusercontent.com/Rajavasanthan/jsondata/master/pagenation.json")
         request.send()
         var response = {}
         request.onload = function(){
-            console.log("Clicked inside onLoad func")
     
             var res = JSON.parse(request.response)
             response = res
-            console.log(res)
+            // console.log(res)
         }
         setTimeout(()=>{
         var tot = response.length
@@ -87,7 +85,6 @@ pardiv.style.alignItems = "center"
         var n = 0
         
         if (pagenum=="First"){
-            console.log("inside if")
             i=0
             n=10
         }
@@ -102,7 +99,7 @@ pardiv.style.alignItems = "center"
         
         for(i;i<n;i++){
             obj_val = response[i]
-            console.log(obj_val.id," ",obj_val.name," ",obj_val.email)
+            // console.log(obj_val.id," ",obj_val.name," ",obj_val.email)
             loadData(obj_val.id,obj_val.name,obj_val.email)}}},1000)
 
         }
