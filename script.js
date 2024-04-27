@@ -45,6 +45,8 @@ pardiv.style.alignItems = "center"
 
         var tbdy = document.createElement("tbody")
         tbdy.id = "table_body"
+
+        pgn_link_load(1)
         
         function loadData(id,name,email){
                 var tr1 = tr_fn()
@@ -195,7 +197,7 @@ var pg_itm_lnk7 = document.createElement("a")
 pg_itm_lnk7.className = "page-link"
 pg_itm_lnk7.setAttribute("href","#")
 pg_itm_lnk7.innerHTML = "7"
-pg_itm_lnk7.setAttribute("onclick","pgn_link_load(7")
+pg_itm_lnk7.setAttribute("onclick","pgn_link_load(7)")
 
 
 var pgn_itm_lst8 = document.createElement("li") 
